@@ -1,17 +1,8 @@
-# Send-in-blue-integration-in-python
-# Installation
-install package using ```pip install sib_api_v3_sdk```
-
-***Replace your send-in-blue credentials***
-
-
-
-```
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 
-API_KEY = 'SEND_IN_BLUE_API_KEY'            //replace api key
-TEMPLATE_ID = 'send-in-blue template id'   // replace template id
+API_KEY = 'SEND_IN_BLUE_API_KEY'          //  "replace api key"
+TEMPLATE_ID = 'send-in-blue template id'  // "replace template id"
 
 configuration = sib_api_v3_sdk.Configuration()
 configuration.api_key['api-key'] = API_KEY
@@ -33,5 +24,3 @@ def send_mail_to_agent(cls, data):
     except ApiException as e:
         print(e)
         return None
-```
-
