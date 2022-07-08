@@ -25,7 +25,7 @@ def send_mail_to_agent(cls, data):
     to = [{"email": "email", "name": "Title of recipient"}]
     params = {"body": body, "templateId": TEMPLATE_ID}
     
-    send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(to=to, params=params, template_id=1)
+    send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(to=to, params=params, template_id=TEMPLATE_ID)
 
     try:
         api_response = api_instance.send_transac_email(send_smtp_email)
